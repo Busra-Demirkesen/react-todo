@@ -1,5 +1,5 @@
 import { useState } from "react";
-import TodoItem from "./components/TodoItem";
+
 import { dummyData } from "./data/todos";
 import type { Todo } from "./types/todo";
 import AddTodoForm from "./components/AddTodoForm";
@@ -30,7 +30,7 @@ function App() {
   }
 
   return (
-    <main className="py-10 h-screen space-y-5">
+    <main className="py-10 h-screen space-y-5 overflow-y-auto">
       <h1 className="font-bold text-3xl text-center">Your Todos</h1>
       <div className="max-w-lg mx-auto bg-slate-100 p-5 rounded-md space-y-6">
         <AddTodoForm onSubmit={addTodo} />

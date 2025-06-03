@@ -20,6 +20,7 @@ export default function TodoList({
   });
 
   return (
+    <>
     <div className="space-y-2">
       {todoSorted.map((todo) => (
         <TodoItem
@@ -30,5 +31,9 @@ export default function TodoList({
         />
       ))}
     </div>
+    {todos.length === 0 && (
+      <p className="text-center text-gray-500">No todos available</p>
+    )}
+    </>
   );
 }
